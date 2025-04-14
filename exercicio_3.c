@@ -6,6 +6,14 @@ int comparar(const void *a, const void *b) {
     return (*(int*)a - *(int*)b);
 }
 
+// Função para exibir o array
+void exibe_array(int valores[], int tamanho) {
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", valores[i]);
+    }
+    printf("\n");
+}
+
 int main() {
     int N;
 
@@ -32,11 +40,8 @@ int main() {
 
     // Exibe os números ordenados
     printf("Numeros em ordem crescente:\n");
-    for (int i = 0; i < N; i++) {
-        printf("%d ", numeros[i]);
-    }
-
-    printf("\n");
+    exibe_array(numeros, N);
 
     return 0;
 }
+
